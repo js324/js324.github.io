@@ -1,0 +1,188 @@
+<!-- VIEW FROM FULL PAGE FOR BEST EXPERIENCE-->
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+$(function() {
+	$('a[href*=#]').on('click',  function(e) {
+		e.preventDefault();
+		$('html, body').animate({ scrollTop: //getting scrollbar position of the href 
+  $($(this).attr('href')).offset().top} //Getting the top property of offset() of href that a points to (one you click) 
+                                      , "slow")});
+}); 
+
+//Scroll Button JQuery https://gist.github.com/CodeMyUI/64383984c2b17f2eba2e71ee28a9cd7c
+var projecttile = $(".project-tile"),
+    currdeg  = 0;
+var slideIndex = 0;
+var slides = document.getElementsByClassName("mySlides");
+var dots = document.getElementsByClassName("dot");
+var letter=String.fromCharCode(97+slideIndex);
+
+$(".next").on("click", { d: "next" }, rotate);
+$(".prev").on("click", { d: "prev" }, rotate);
+
+$(".a").hover(function() {
+  $(".a >"+ ".slideshowimg").css({"opacity": ".3"});
+  $(".a >"+".middle").css({"opacity": ".9"});
+},
+function () {
+  $(".a >"+ ".slideshowimg").css({"opacity": "1"});
+  $(".a >"+ ".middle").css({"opacity": "0"});
+ });
+
+//Have to update function after a change in slideindex
+$('.prev, .next, .dot').on('click', function() {
+$("."+letter).hover(function() {
+  $("."+letter +">"+ ".slideshowimg").css({"opacity": ".3"});
+  $("."+letter +">"+".middle").css({"opacity": ".9"});
+},
+function () {
+  $("."+letter +">"+ ".slideshowimg").css({"opacity": "1"});
+  $("."+letter +">"+ ".middle").css({"opacity": "0"});
+ });
+  
+});
+
+//Setting up first active dot
+dots[slideIndex].className += " active";
+
+
+function rotate(e){
+  if(e.data.d=="next"){
+    currdeg = currdeg - 60;
+    slideIndex+=1;
+    if (slideIndex>slides.length-1)
+    {
+    slideIndex=0;    
+    }
+  }
+  if(e.data.d=="prev"){
+    currdeg = currdeg + 60;
+    slideIndex-=1;
+    if (slideIndex<0)
+    {
+    slideIndex=slides.length-1;    
+    }
+  }
+  projecttile.css({
+    "-webkit-transform": "rotateY("+currdeg+"deg)",
+    "-moz-transform": "rotateY("+currdeg+"deg)",
+    "-o-transform": "rotateY("+currdeg+"deg)",
+    "transform": "rotateY("+currdeg+"deg)"
+  });
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  //unbinding the hover from the previous slideindex 
+  $("."+letter).off('mouseenter mouseleave');  
+  letter=String.fromCharCode(97+slideIndex);
+  dots[slideIndex].className += " active";
+}
+//Rotating 3d carousel https://codepen.io/nopr/full/rfBJx/
+//Combined with https://www.w3schools.com/howto/howto_js_slideshow.asp
+function currentSlide(n) {
+  showSlides(n);
+}
+
+function showSlides(n) {
+  currdeg+=60*-(n-slideIndex)
+  var i;
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  projecttile.css({
+     "-webkit-transform": "rotateY("+currdeg+"deg)",
+    "-moz-transform": "rotateY("+currdeg+"deg)",
+    "-o-transform": "rotateY("+currdeg+"deg)",
+    "transform": "rotateY("+currdeg+"deg)"
+  });
+  
+  slideIndex=n;
+  $("."+letter).off('mouseenter mouseleave');  
+  letter=String.fromCharCode(97+slideIndex);
+  dots[slideIndex].className += " active";
+}
+</script>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<body>
+  <div id="container">
+     <img id="homeimage" src="https://source.unsplash.com/njDePTtXMyU/2150x1000">
+           
+  <div id="welcome-section">
+    <div id="welcome-caption">
+      <h1>My Resume</h1>  
+    </div>
+    <a href="#projects" class="scroll-down1"> <i class="arrow down"></i><div class="scrollprompt">Scroll</div></p> </a>
+  </div>
+  <div id="projects">
+    - Project List -
+    <div class="project-tile">
+     <!--FCC-->
+    <div class="mySlides fade a">
+    <div class="numbertext">1 / 6</div>
+    <img class="slideshowimg" src="https://i2.wp.com/softwareengineeringdaily.com/wp-content/uploads/2017/01/freecodecamp.jpeg?fit=720%2C240&ssl=1" style="width:100%">
+      <div class="middle"><div class="techtitle">Technologies Used: </div><div class="techused"> <img class="javascript"><img class="htmlcss"> </div> <div class="descript">Description: I have completed the Responsive Web Design Certification, learning HTML/CSS along with Flexbox and Grid through various coding exercises and submitting 3/5 projects. I have also started the Javascript Algorithms and Data Structures Certificate, completing Introduction to Javascript and Basic Algorithm Scripting. <br><br> Links to My Project(s): <br>Test
+<!-- Have Hyperlinks -->        
+</div></div>
+  <div class="text">FreeCodeCamp Web Design Certification</div>
+  </div>
+<!--CS50-->
+  <div class="mySlides fade b">
+    <div class="numbertext">2 / 6</div>
+    <img class="slideshowimg" src="https://www.edx.org/sites/default/files/course/image/promoted/cs50.jpg" style="width:100%">
+    <div class="middle"><div class="techtitle">Technologies Used: </div> <div class="techused"> <img class="clang"><img class="python"><img class="javascript"><img class="htmlcss"> <img class="sql"></div> <div class="descript">Description:  <br><br> Links to My Project(s): <br>Test
+<!-- Have Hyperlinks -->        
+</div></div>
+    <div class="text">CS50 Course Offered In edX</div>
+  </div>
+ <!--Reddit Bot-->
+  <div class="mySlides fade c">
+    <div class="numbertext">3 / 6</div>
+    <img class="slideshowimg" src="https://www.blackhattoolz.com/images/redditmini.png" style="width:100%">
+    <div class="middle"> test</div>
+    <div class="text">Caption Three</div>
+  </div>
+  <!--Calc-->
+  <div class="mySlides fade d">
+    <div class="numbertext">4 / 6</div>
+    <img class="slideshowimg" src="https://s3-us-west-2.amazonaws.com/i.cdpn.io/453575.MKRwEZ.e006e416-aa5b-47bd-9c41-f90d64a04d2a.png" style="width:100%">
+    <div class="middle"> test</div>
+    <div class="text">Caption Three</div>
+  </div>
+   <!--Evo Stream-->
+      <div class="mySlides fade e">
+    <div class="numbertext">5 / 6</div>
+    <img class="slideshowimg" src="http://i1.wp.com/shoryuken.com/wp-content/uploads/2017/01/evo-2017-logo.jpg?fit=750%2C400&resize=750%2C400" style="width:100%">
+    <div class="middle"> test</div>
+    <div class="text">Caption Three</div>
+  </div>
+    <!--FrameDataweb?-->
+      <div class="mySlides fade f">
+    <div class="numbertext">6 / 6</div>
+    <img class="slideshowimg" src="img3.jpg" style="width:100%">
+    <div class="middle"> test</div>
+    <div class="text">Caption Three</div>
+  </div>
+   <!--This own website!-->
+
+  <!-- Next and previous buttons -->
+    </div>
+  <a class="prev">&#10094;</a>
+  <a class="next">&#10095;</a>
+  <div style="text-align:center">
+  <span class="dot" onclick="currentSlide(0)"></span> 
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span>
+</div>
+    <a href="#contact" class="scroll-down2"> <i class="arrow down"></i><div class="scrollprompt">Scroll</div></p> </a>
+  </div>
+  <div id="contact">
+    <div class="endcaption">- Contact Me -</div>
+  </div>
+  
+</div>
+</body>
+
