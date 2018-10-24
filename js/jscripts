@@ -99,4 +99,4 @@ function showSlides(n) {
   letter=String.fromCharCode(97+slideIndex);
   dots[slideIndex].className += " active";
 }
-};
+});
