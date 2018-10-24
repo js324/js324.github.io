@@ -1,6 +1,6 @@
 
 $(function() {
-	$('a[href*=#]').on('click',  function(e) {
+	$('a[href*="#"]').on('click',  function(e) {
 		e.preventDefault();
 		$('html, body').animate({ scrollTop: //getting scrollbar position of the href 
   $($(this).attr('href')).offset().top} //Getting the top property of offset() of href that a points to (one you click) 
