@@ -6,7 +6,7 @@ $(function() {
   $($(this).attr('href')).offset().top} //Getting the top property of offset() of href that a points to (one you click) 
                                       , "slow")});
 }); 
-
+$(function() {
 //Scroll Button JQuery https://gist.github.com/CodeMyUI/64383984c2b17f2eba2e71ee28a9cd7c
 var projecttile = $(".project-tile"),
     currdeg  = 0;
@@ -102,3 +102,4 @@ function showSlides(n) {
   letter=String.fromCharCode(97+slideIndex);
   dots[slideIndex].className += " active";
 }
+}); 
