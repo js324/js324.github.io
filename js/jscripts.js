@@ -17,7 +17,7 @@ var letter=String.fromCharCode(97+slideIndex);
 
 $(".next").on("click", { d: "next" }, rotate);
 $(".prev").on("click", { d: "prev" }, rotate);
-for (var i=0,  i < dots.length; i++) 
+for (var i=0;  i < dots.length; i++) 
 {
 	dots[i].onclick = currentSlides(i);
 }
