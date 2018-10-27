@@ -18,11 +18,11 @@ var letter=String.fromCharCode(97+slideIndex);
 $(".next").on("click", { d: "next" }, rotate);
 $(".prev").on("click", { d: "prev" }, rotate);
 
-//Trying to configure dots again (potentially could be document ready at top of block)	
-/*for (var i=0;  i < dots.length; i++) 
+for (var z=0; z<dots.length; z++)
 {
-	dots[i].addEventListener('click', currentSlide(i));
-}*/
+$(dots[z]).on("click", { d: z }, currentSlide);
+}
+	
 $(".a").hover(function() {
   $(".a >"+ ".slideshowimg").css({"opacity": ".3"});
   $(".a >"+".middle").css({"opacity": ".9"});
@@ -82,8 +82,8 @@ function rotate(e){
 }
 //Rotating 3d carousel https://codepen.io/nopr/full/rfBJx/
 //Combined with https://www.w3schools.com/howto/howto_js_slideshow.asp
-function currentSlide(n) {
-  showSlides(n);
+function currentSlide(e) {
+  showSlides(e.data.d);
 }
 
 function showSlides(n) {
