@@ -7,25 +7,34 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script text="text/javascript" src="https://js324.github.io/js/jscripts.js"></script>
 	</head>
+<header id ="header">
+<nav id="navbar">
+  <a class="nav-link" href="#contact">Contact</a>
+  <a class="nav-link" href="#projects">Projects</a>
+  <a class="nav-link" href="#welcome-section">Top of Page</a>
+</nav>
+
+</header>
 
 <body>
   <div id="container">
      <img id="homeimage" src="https://source.unsplash.com/njDePTtXMyU/2150x1000">
            
-  <div id="welcome-section">
+  <div id="welcome-section" class="welcome-section">
     <div id="welcome-caption">
       <h1>My Resume</h1>  
     </div>
     <a href="#projects" class="scroll-down1"> <i class="arrow down"></i><div class="scrollprompt">Scroll</div></p> </a>
   </div>
   <div id="projects">
-    - Project List -
+    - Portfolio List -
     <div class="project-tile">
+      <div class="project-title"></div>
      <!--FCC-->
     <div class="mySlides fade a">
     <div class="numbertext">1 / 6</div>
     <img class="slideshowimg" src="https://i2.wp.com/softwareengineeringdaily.com/wp-content/uploads/2017/01/freecodecamp.jpeg?fit=720%2C240&ssl=1" style="width:100%">
-      <div class="middle"><div class="techtitle">Technologies Used: </div><div class="techused"> <img class="javascript"><img class="htmlcss"> </div> <div class="descript">Description: I have completed the Responsive Web Design Certification, learning HTML/CSS along with Flexbox and Grid through various coding exercises and submitting 3/5 projects. I have also started the Javascript Algorithms and Data Structures Certificate, completing Introduction to Javascript and Basic Algorithm Scripting. <br><br> Links to My Project(s): <br>Test
+      <div class="middle"><div class="techtitle">Technologies Used: </div><div class="techused"> <img class="javascript"><img class="htmlcss"> </div> <div class="descript">Description: I have completed the Responsive Web Design Certification, learning HTML/CSS along with Flexbox and Grid through various coding exercises and submitting 4/5 projects. I have also started the Javascript Algorithms and Data Structures Certificate, completing Introduction to Javascript and Basic Algorithm Scripting. <br><br> Links to My Project(s): <br><a class ="projectslink" href="codepen.io/js324">Link to my Codepen with Projects Hosted there</a>
 <!-- Have Hyperlinks -->        
 </div></div>
   <div class="text">FreeCodeCamp Web Design Certification</div>
@@ -34,7 +43,7 @@
   <div class="mySlides fade b">
     <div class="numbertext">2 / 6</div>
     <img class="slideshowimg" src="https://www.edx.org/sites/default/files/course/image/promoted/cs50.jpg" style="width:100%">
-    <div class="middle"><div class="techtitle">Technologies Used: </div> <div class="techused"> <img class="clang"><img class="python"><img class="javascript"><img class="htmlcss"> <img class="sql"></div> <div class="descript">Description:  <br><br> Links to My Project(s): <br>Test
+    <div class="middle"><div class="techtitle">Technologies Used: </div> <div class="techused"> <img class="clang"><img class="python"><img class="javascript"><img class="htmlcss"> <img class="sql"></div> <div class="descript">Description:  CS50 is a course offered by Harvard and a highly recommended course for beginners.  It is over a span of 12 weeks with 1-2 lectures almost every week and 8 Problem Sets which are each a sort of mini project (expanded on next slide).  Languages varied from Scratch, C, Python, as well as Javascript and various libraries and APIs. <br><br> Link to the Course:<br> <a class ="projectslink" href="https://www.edx.org/course/cs50s-introduction-computer-science-harvardx-cs50x">Link to CS50 Web Page</a><br>
 <!-- Have Hyperlinks -->        
 </div></div>
     <div class="text">CS50 Course Offered In edX</div>
@@ -42,30 +51,38 @@
  <!--Reddit Bot-->
   <div class="mySlides fade c">
     <div class="numbertext">3 / 6</div>
-    <img class="slideshowimg" src="https://www.blackhattoolz.com/images/redditmini.png" style="width:100%">
-    <div class="middle"> test</div>
-    <div class="text">Caption Three</div>
+    <img class="slideshowimg" src="https://i.stack.imgur.com/IQz8p.png" style="width:100%">
+    <div class="middle"><div class="techtitle">Technologies Used: </div> <div class="techused"> <img class="clang"><img class="python"><img class="javascript"><img class="htmlcss"> <img class="sql"></div> <div class="descript">Description: We have used JQuery, Jinja, Flask as well as the APIs like Google Maps for PSET8 Mashup (seen in thumbnail). Another notable project would be PSET7 Finance where I created a mock stock trading website, complete with an SQL database to hold account data and use of Alphavantage API to get real-time data.  <br><br>Links to Projects:<br> Unable to link personal projects since it would violate Academic Honesty
+<!-- Have Hyperlinks -->        
+</div></div>
+    <div class="text">CS50 Projects</div>
   </div>
   <!--Calc-->
   <div class="mySlides fade d">
     <div class="numbertext">4 / 6</div>
     <img class="slideshowimg" src="https://s3-us-west-2.amazonaws.com/i.cdpn.io/453575.MKRwEZ.e006e416-aa5b-47bd-9c41-f90d64a04d2a.png" style="width:100%">
-    <div class="middle"> test</div>
-    <div class="text">Caption Three</div>
+    <div class="middle"><div class="techtitle">Technologies Used: </div> <div class="techused"><img class="javascript"><img class="htmlcss"></div> <div class="descript">Description: A quick, beginner-project calculator. Inspired by Calculator Project that was originally on FreeCodeCamp, but a good exercise in trying to replicate an already well known project and getting comfortable. (Note: Thumbnail is just a random JS calculator, not mine)<br><br> Links to My Project(s): <br><a class ="projectslink" href="https://codepen.io/js324/full/xyvqRg/">Link to Project on Codepen</a>
+<!-- Have Hyperlinks -->        
+</div></div>
+    <div class="text">Calculator</div>
   </div>
    <!--Evo Stream-->
       <div class="mySlides fade e">
     <div class="numbertext">5 / 6</div>
     <img class="slideshowimg" src="http://i1.wp.com/shoryuken.com/wp-content/uploads/2017/01/evo-2017-logo.jpg?fit=750%2C400&resize=750%2C400" style="width:100%">
-    <div class="middle"> test</div>
-    <div class="text">Caption Three</div>
+    <div class="middle"><div class="techtitle">Technologies Used: </div> <div class="techused"><img class="python"><img class="javascript"><img class="htmlcss"></div> <div class="descript">Description: An unofficial graph that used Python with the Twitch API to request every minute the viewer count and time of the Evo 2018 stream, streamed on its final day on Sunday, August 5.  After storing the data locally, I created a simple chart with JSCharts and html/css to better visualize it.<br><br> Links to My Project(s): <br><a class ="projectslink" href="https://github.com/js324/evoviewerchart">Link to the Github Repo</a>
+<!-- Have Hyperlinks -->        
+</div></div>
+    <div class="text">Evo Viewer Tracker and Chart</div>
   </div>
     <!--FrameDataweb?-->
       <div class="mySlides fade f">
     <div class="numbertext">6 / 6</div>
-    <img class="slideshowimg" src="http://6.anychart.com/products/anychart/docs/users-guide/img/Samples/chart-titles-enabling-sample.png" style="width:100%">
-    <div class="middle"> test</div>
-    <div class="text">Caption Three</div>
+    <img class="slideshowimg" src="https://www.blackhattoolz.com/images/redditmini.png" style="width:100%">
+    <div class="middle"><div class="techtitle">Technologies Used: </div> <div class="techused"> <img class="clang"><img class="python"><img class="javascript"><img class="htmlcss"> <img class="sql"></div> <div class="descript">Description: Based off the popular meme, "Press F to Pay Respects," using the Reddit API to log in with the bot's own account, the bot can search in any subreddit for comments with the format "!F /u/(username)" and the account would reply to the comment with an URL to the edited image (using PIL library) automatically uploaded on Imgur with its API. Never hosted it with its own dedicated server, but it could just run forever on my computer with a loop. <br><br> Links to My Project(s): <br><a class ="projectslink" href="https://github.com/js324/FRespects_RedditBot">Link to the Github Repo</a>
+<!-- Have Hyperlinks -->        
+</div></div>
+    <div class="text">Reddit Bot</div>
   </div>
    <!--This own website!-->
 
@@ -74,17 +91,22 @@
   <a class="prev">&#10094;</a>
   <a class="next">&#10095;</a>
   <div style="text-align:center">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span>
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span>
+  <span class="dot" onclick="currentSlide(0)"></span> 
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" ></span> 
+  <span class="dot" ></span>
 </div>
     <a href="#contact" class="scroll-down2"> <i class="arrow down"></i><div class="scrollprompt">Scroll</div></p> </a>
   </div>
+
+
   <div id="contact">
-    <div class="endcaption">- Contact Me -</div>
+   
+    <div id="profilelinks"><a href="https://codepen.io/js324/" target="_blank">My Code Pen<img class="codepen"></a><div class="vl"></div><a href="https://github.com/js324" target="_blank">My Github<img class="github"></a>                </div>
+
+    <div class="endcaption">- Find More -</div>
   </div>
   
 </div>
